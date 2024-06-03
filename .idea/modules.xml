@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/estrutura-condicional/estrutura-condicional.iml" filepath="$PROJECT_DIR$/estrutura-condicional/estrutura-condicional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/estrutura-sequencial/estrutura-sequencial.iml" filepath="$PROJECT_DIR$/estrutura-sequencial/estrutura-sequencial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java-completo.iml" filepath="$PROJECT_DIR$/.idea/java-completo.iml" />
+    </modules>
+  </component>
+</project>
