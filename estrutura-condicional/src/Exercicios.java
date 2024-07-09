@@ -3,167 +3,230 @@ import java.util.Scanner;
 public class Exercicios {
 
     public static void main(String[] args) {
-
+        Scanner sc = new Scanner(System.in);
         Exercicios exercicios = new Exercicios();
 
         System.out.println("Exercício 01\n" +
-                "Faça um programa para ler dois valores inteiros, e depois mostrar na tela a soma desses números com uma mensagem explicativa");
-//        exercicios.Exercicio1();
+                "Fazer um programa para ler um número inteiro, e depois dizer se este número é negativo ou não.");
+        exercicios.Exercicio1(sc);
+        System.out.println("\n\n");
 
         System.out.println("Exercício 02\n" +
-                "Faça um programa para ler o valor do raio de um círculo, e depois mostrar o valor da área deste círculo com quatro casas decimais.");
-//        exercicios.Exercicio2();
+                "Fazer um programa para ler um número inteiro e dizer se este número é par ou ímpar.");
+        exercicios.Exercicio2(sc);
+        System.out.println("\n\n");
 
-        System.out.println("Exercício 03\n" +
-                "Fazer um programa para ler quatro valores inteiros A, B, C e D. A seguir, calcule e mostre a diferença do produto de A e B pelo produto de C e D segundo a fórmula: DIFERENCA = (A * B - C * D).");
-//        exercicios.Exercicio3();
+        System.out.println("""
+                        Exercício 03
+                        Leia 2 valores inteiros (A e B). Após, o programa deve mostrar uma mensagem "Sao Multiplos" ou "Nao sao Multiplos", indicando se os valores lidos são múltiplos entre si. 
+                        Atenção: os números devem poder ser digitados em ordem crescente ou decrescente.
+                        """);
+        exercicios.Exercicio3(sc);
+        System.out.println("\n\n");
 
-        System.out.println("Exercício 04\n" +
-                "azer um programa que leia o número de um funcionário, seu número de horas trabalhadas, o valor que recebe por " +
-                "hora e calcula o salário desse funcionário. A seguir, mostre o número e o salário do funcionário, com duas casas " +
-                "decimais.");
-//        exercicios.Exercicio4();
+        System.out.println("""
+                        Exercício 04
+                        Leia a hora inicial e a hora final de um jogo. 
+                        A seguir calcule a duração do jogo, sabendo que o mesmo pode começar em um dia e terminar em outro, tendo uma duração mínima de 1 hora e máxima de 24 horas.
+                        """);
+        exercicios.Exercicio4(sc);
+        System.out.println("\n\n");
 
         System.out.println("Exercício 05\n" +
-                "Fazer um programa para ler o código de uma peça 1, o número de peças 1, o valor unitário de cada peça 1, o " +
-                "código de uma peça 2, o número de peças 2 e o valor unitário de cada peça 2. Calcule e mostre o valor a ser pago.");
-//        exercicios.Exercicio5();
+                "Com base na tabela abaixo, escreva um programa que leia o código de um item e a quantidade deste item. A seguir, calcule e mostre o valor da conta a pagar.");
+        exercicios.Exercicio5(sc);
+        System.out.println("\n\n");
 
-        System.out.println("Exercício 06\n" +
-                "Fazer um programa que leia três valores com ponto flutuante de dupla precisão: A, B e C. Em seguida, calcule e mostre: \n" +
-                "a) a área do triângulo retângulo que tem A por base e C por altura. \n" +
-                "b) a área do círculo de raio C. (pi = 3.14159) \n" +
-                "c) a área do trapézio que tem A e B por bases e C por altura. \n" +
-                "d) a área do quadrado que tem lado B. \n" +
-                "e) a área do retângulo que tem lados A e B.");
-        exercicios.Exercicio6();
+        System.out.println("""
+                        Exercício 06
+                        Você deve fazer um programa que leia um valor qualquer e apresente uma mensagem dizendo em qual dos seguintes intervalos ([0,25], (25,50], (50,75], (75,100]) este valor se encontra. 
+                        Obviamente se o valor não estiver em nenhum destes intervalos, deverá ser impressa a mensagem “Fora de intervalo”.
+                        """);
+        exercicios.Exercicio6(sc);
+        System.out.println("\n\n");
+
+        System.out.println("""
+                        Exercício 07
+                        Leia 2 valores com uma casa decimal (x e y), que devem representar as coordenadas de um ponto em um plano. 
+                        A seguir, determine qual o quadrante ao qual pertence o ponto, ou se está sobre um dos eixos cartesianos ou na origem (x = y = 0).
+                        Se o ponto estiver na origem, escreva a mensagem “Origem”.
+                        Se o ponto estiver sobre um dos eixos escreva “Eixo X” ou “Eixo Y”, conforme for a situação.
+                        """);
+        exercicios.Exercicio7(sc);
+        System.out.println("\n\n");
+
+        System.out.println("""
+                        Exercício 08
+                        Em um país imaginário denominado Lisarb, todos os habitantes ficam felizes em pagar seus impostos, pois sabem que nele não existem políticos corruptos e os recursos arrecadados são utilizados em benefício da população, sem qualquer desvio. 
+                        A moeda deste país é o Rombus, cujo símbolo é o R$. Leia um valor com duas casas decimais, equivalente ao salário de uma pessoa de Lisarb. 
+                        Em seguida, calcule e mostre o valor que esta pessoa deve pagar de Imposto de Renda, segundo a tabela abaixo.
+                        Lembre que, se o salário for R$ 3002.00, a taxa que incide é de 8% apenas sobre R$ 1000.00, pois a faixa de salário que fica de R$ 0.00 até R$ 2000.00 é isenta de Imposto de Renda. 
+                        No exemplo fornecido (abaixo), a taxa é de 8% sobre R$ 1000.00 + 18% sobre R$ 2.00, o que resulta em R$ 80.36 no total. O valor deve ser impresso com duas casas decimais.
+                        """);
+        exercicios.Exercicio8(sc);
+
+        sc.close();
     }
 
-    public void Exercicio1() {
+    public void Exercicio1(Scanner sc) {
+        System.out.println("Digite o número:");
+        int num = sc.nextInt();
 
-        Scanner sc = new Scanner(System.in);
+        if (num >= 0) {
+            System.out.println("NAO NEGATIVO");
+        } else {
+            System.out.println("NEGATIVO");
+        }
+    }
 
+    public void Exercicio2(Scanner sc) {
+        System.out.println("Digite o número:");
+        int num = sc.nextInt();
+
+        if (num % 2 == 0) {
+            System.out.println("PAR");
+        } else {
+            System.out.println("IMPAR");
+        }
+    }
+
+    public void Exercicio3(Scanner sc) {
         System.out.println("Digite o primeiro número:");
         int n1 = sc.nextInt();
 
         System.out.println("Digite o segundo número:");
         int n2 = sc.nextInt();
 
-        int num = n1 + n2;
-
-        System.out.println("SOMA = " + num);
-
-        sc.close();
+        if (n1 % n2 == 0 || n2 % n1 == 0) {
+            System.out.println("Sao Multiplos");
+        } else {
+            System.out.println("Nao Sao Multiplos");
+        }
     }
 
-    public void Exercicio2() {
+    public void Exercicio4(Scanner sc) {
+        System.out.print("Digite a hora inicial do jogo: ");
+        int horaInicial = sc.nextInt();
 
-        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite a hora final do jogo: ");
+        int horaFinal = sc.nextInt();
 
-        System.out.println("Digite o valor do raio do circulo:");
-        double raio = sc.nextInt();
+        int duracao;
+        if (horaFinal >= horaInicial) {
+            duracao = horaFinal - horaInicial;
+        } else {
+            duracao = 24 - horaInicial + horaFinal;
+        }
 
-        double area = 3.14159 * Math.pow(raio, 2);
+        // Verificando se a duração é mínima de 1 hora e máxima de 24 horas
+        if (duracao == 0) {
+            duracao = 24;
+        }
 
-        String areaFormatada = String.format("%.4f", area);
-
-        System.out.println("A=" + areaFormatada);
-
-        sc.close();
+        System.out.println("O JOGO DUROU " + duracao + " HORA(S)");
     }
 
-    public void Exercicio3() {
+    public void Exercicio5(Scanner sc) {
+        System.out.print("Digite o código:");
+        int codigo = sc.nextInt();
 
-        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite a quantidade:");
+        int quantidade = sc.nextInt();
 
-        System.out.println("Digite o valor de A:");
-        int A = sc.nextInt();
-        System.out.println("Digite o valor de B:");
-        int B = sc.nextInt();
-        System.out.println("Digite o valor de C:");
-        int C = sc.nextInt();
-        System.out.println("Digite o valor de D:");
-        int D = sc.nextInt();
+        double total;
+        if (codigo == 1) {
+            total = quantidade * 4.0;
+        }
+        else if (codigo == 2) {
+            total = quantidade * 4.5;
+        }
+        else if (codigo == 3) {
+            total = quantidade * 5.0;
+        }
+        else if (codigo == 4) {
+            total = quantidade * 2.0;
+        }
+        else {
+            total = quantidade * 1.5;
+        }
 
-        int diferenca = (A * B) - (C * D);
-
-        System.out.println("DIFERENCA = " + diferenca);
-
-        sc.close();
+        System.out.printf("Total: R$ %.2f%n", total);
     }
 
-    public void Exercicio4() {
+    public void Exercicio6(Scanner sc) {
+        System.out.println("Digite um valor:");
+        double numero = sc.nextDouble();
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Digite o número do funcionário:");
-        int numeroFuncionario = sc.nextInt();
-
-        System.out.println("Digite o número de horas trabalhadas:");
-        int horasTrabalhadas = sc.nextInt();
-
-        System.out.println("Digite o valor que recebe por hora:");
-        double valorPorHora = sc.nextDouble();
-
-        double salario = horasTrabalhadas * valorPorHora;
-
-        System.out.printf("NUMBER = %d%n", numeroFuncionario);
-        System.out.printf("SALARY = U$ %.2f%n", salario);
-
-        sc.close();
+        if (numero < 0.0 || numero > 100.0) {
+            System.out.println("Fora de intervalo");
+        }
+        else if (numero <= 25.0) {
+            System.out.println("Intervalo [0,25]");
+        }
+        else if (numero <= 50.0) {
+            System.out.println("Intervalo (25,50]");
+        }
+        else if (numero <= 75.0) {
+            System.out.println("Intervalo (50,75]");
+        }
+        else {
+            System.out.println("Intervalo (75,100]");
+        }
     }
 
-    public void Exercicio5() {
+    public void Exercicio7(Scanner sc) {
+        System.out.println("Digite o primeiro número:");
+        double x = sc.nextDouble();
 
-        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite o segundo número:");
+        double y = sc.nextDouble();
 
-        System.out.println("Digite o código, número de peças e valor unitário da peça 1:");
-        int codigoPeca1 = sc.nextInt();
-        int numeroPecas1 = sc.nextInt();
-        double valorUnitario1 = sc.nextDouble();
-
-        System.out.println("Digite o código, número de peças e valor unitário da peça 2:");
-        int codigoPeca2 = sc.nextInt();
-        int numeroPecas2 = sc.nextInt();
-        double valorUnitario2 = sc.nextDouble();
-
-        double valorTotal = (numeroPecas1 * valorUnitario1) + (numeroPecas2 * valorUnitario2);
-
-        System.out.printf("VALOR A PAGAR: R$ %.2f%n", valorTotal);
-
-        sc.close();
+        if (x == 0.0 && y == 0.0) {
+            System.out.println("Origem");
+        }
+        else if (x == 0.0) {
+            System.out.println("Eixo Y");
+        }
+        else if (y == 0.0) {
+            System.out.println("Eixo X");
+        }
+        else if (x > 0.0 && y > 0.0) {
+            System.out.println("Q1");
+        }
+        else if (x < 0.0 && y > 0.0) {
+            System.out.println("Q2");
+        }
+        else if (x < 0.0 && y < 0.0) {
+            System.out.println("Q3");
+        }
+        else {
+            System.out.println("Q4");
+        }
     }
 
-    public void Exercicio6() {
+    public void Exercicio8(Scanner sc) {
+        System.out.println("Digite o salario:");
+        double salario = sc.nextDouble();
 
-        Scanner sc = new Scanner(System.in);
+        double imposto;
+        if (salario <= 2000.0) {
+            imposto = 0.0;
+        }
+        else if (salario <= 3000.0) {
+            imposto = (salario - 2000.0) * 0.08;
+        }
+        else if (salario <= 4500.0) {
+            imposto = (salario - 3000.0) * 0.18 + 1000.0 * 0.08;
+        }
+        else {
+            imposto = (salario - 4500.0) * 0.28 + 1500.0 * 0.18 + 1000.0 * 0.08;
+        }
 
-        System.out.println("Digite o valor de A:");
-        double A = sc.nextDouble();
-
-        System.out.println("Digite o valor de B:");
-        double B = sc.nextDouble();
-
-        System.out.println("Digite o valor de C:");
-        double C = sc.nextDouble();
-
-        double areaTriangulo = (A * C) / 2.0;
-
-        double pi = 3.14159;
-        double areaCirculo = pi * Math.pow(C, 2);
-
-        double areaTrapezio = ((A + B) * C) / 2.0;
-
-        double areaQuadrado = Math.pow(B, 2);
-
-        double areaRetangulo = A * B;
-
-        System.out.printf("TRIANGULO: %.3f%n", areaTriangulo);
-        System.out.printf("CIRCULO: %.3f%n", areaCirculo);
-        System.out.printf("TRAPEZIO: %.3f%n", areaTrapezio);
-        System.out.printf("QUADRADO: %.3f%n", areaQuadrado);
-        System.out.printf("RETANGULO: %.3f%n", areaRetangulo);
-
-        sc.close();
+        if (imposto == 0.0) {
+            System.out.println("Isento");
+        }
+        else {
+            System.out.printf("R$ %.2f%n", imposto);
+        }
     }
 }
